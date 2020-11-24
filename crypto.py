@@ -8,7 +8,7 @@ from Cryptodome.Random import get_random_bytes
 
 def encrypt(plain_text, password):
     # generate a random salt
-    salt = get_random_bytes(AES.block_size)
+    salt = get_random_bytes(AES.block_size) 
 
     # use the Scrypt KDF to get a private key from the password
     private_key = hashlib.scrypt(
